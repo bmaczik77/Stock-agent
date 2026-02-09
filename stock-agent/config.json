@@ -1,0 +1,58 @@
+{
+  "default_period": "1y",
+  "report_output_dir": "reports",
+
+  "technical_analysis": {
+    "sma_periods": [20, 50, 200],
+    "ema_periods": [12, 26],
+    "rsi_period": 14,
+    "macd_fast": 12,
+    "macd_slow": 26,
+    "macd_signal": 9,
+    "bollinger_window": 20,
+    "bollinger_std": 2.0,
+    "atr_period": 14
+  },
+
+  "fundamental_analysis": {
+    "pe_ratio_low": 15,
+    "pe_ratio_high": 30,
+    "peg_ratio_threshold": 1.5,
+    "profit_margin_good": 0.15,
+    "profit_margin_poor": 0.05,
+    "debt_to_equity_low": 0.5,
+    "debt_to_equity_high": 2.0,
+    "current_ratio_good": 1.5,
+    "current_ratio_poor": 1.0,
+    "roe_good": 0.15,
+    "roe_poor": 0.08,
+    "revenue_growth_good": 0.10,
+    "revenue_growth_poor": 0.0,
+    "free_cashflow_positive": true,
+    "dividend_yield_good": 0.02
+  },
+
+  "sector_comparison": {
+    "max_peers": 10,
+    "metrics": [
+      "trailingPE",
+      "forwardPE",
+      "priceToBook",
+      "profitMargins",
+      "returnOnEquity",
+      "revenueGrowth",
+      "debtToEquity"
+    ]
+  },
+
+  "scheduler": {
+    "watchlist": ["AAPL", "MSFT", "GOOG", "AMZN", "NVDA"],
+    "schedule_time": "08:00",
+    "timezone": "US/Eastern",
+    "email_notifications": false,
+    "email_to": "",
+    "email_from": "",
+    "smtp_server": "",
+    "smtp_port": 587
+  }
+}
