@@ -59,6 +59,8 @@ class SectorComparison:
 
         try:
             info = stock.info
+            if not info:
+                raise ValueError("empty response")
         except Exception as exc:
             return {"error": f"Could not fetch info for {ticker}: {exc}"}
 

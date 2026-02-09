@@ -74,7 +74,7 @@ import yfinance, pandas, numpy, schedule
 print(f'  yfinance  {yfinance.__version__}')
 print(f'  pandas    {pandas.__version__}')
 print(f'  numpy     {numpy.__version__}')
-print(f'  schedule  {schedule.__version__}')
+print(f'  schedule  (installed)')
 "
 
 echo

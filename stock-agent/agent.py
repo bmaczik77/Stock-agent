@@ -129,8 +129,11 @@ class TechnicalAnalyzer:
     def analyze(self, ticker: str, period: str = "1y") -> dict:
         """Download price data and compute indicators."""
         logger.info("Fetching price data for %s (period=%s)", ticker, period)
-        stock = yf.Ticker(ticker)
-        hist = stock.history(period=period)
+        try:
+            stock = yf.Ticker(ticker)
+            hist = stock.history(period=period)
+        except Exception as exc:
+            return {"error": f"Could not fetch price data for {ticker}: {exc}"}
 
         if hist.empty:
             return {"error": f"No price data found for {ticker}"}
